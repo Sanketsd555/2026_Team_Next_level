@@ -1,5 +1,37 @@
-/* Icon library — refactored from Illustrations.jsx with same SVG paths */
 
+
+// Overwriting the flashy AdIcon with a minimalist, monochrome version
+export function AdIcon({ title }) {
+  const lower = title.toLowerCase()
+  let name = 'card'
+  
+  if (lower.includes('home')) name = 'home'
+  else if (lower.includes('wheeler') || lower.includes('vehicle')) name = 'trending'
+  else if (lower.includes('business')) name = 'chart'
+  else if (lower.includes('gold') || lower.includes('personal')) name = 'rupee'
+  
+  return (
+    <div style={{
+      width: 40,
+      height: 40,
+      display: 'grid',
+      placeItems: 'center',
+      borderRadius: 'var(--radius-sm)',
+      border: '1px solid var(--border-medium)',
+      background: 'var(--bg-secondary)',
+      color: 'var(--text-secondary)'
+    }}>
+      <Icon name={name} size={18} />
+    </div>
+  )
+}
+
+// HeroArt is removed via CSS, but we return null here just to be safe if it's imported
+export function HeroArt() {
+  return null
+}
+
+// Re-export original icons map
 const P = {
   user: [
     <circle key="a" cx="12" cy="8" r="4" />,
@@ -147,7 +179,7 @@ const rupee = (
   <text x="12" y="16.5" textAnchor="middle" fontSize="13" fontWeight="700" fill="currentColor" stroke="none">₹</text>
 )
 
-export function Icon({ name, size = 18, className = '' }) {
+export function Icon({ name, size = 16, className = '' }) {
   const paths = P[name]
   if (!paths) return null
   return (
@@ -157,7 +189,7 @@ export function Icon({ name, size = 18, className = '' }) {
       height={size}
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.8"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
@@ -165,138 +197,6 @@ export function Icon({ name, size = 18, className = '' }) {
     >
       {paths}
       {name === 'rupee' ? rupee : null}
-    </svg>
-  )
-}
-
-/* Ad illustration icons — kept from original */
-const iconShell = (art) => (
-  <svg role="img" aria-label="Loan icon" viewBox="0 0 120 120" width="120" height="120">
-    <defs>
-      <linearGradient id="ad-bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stopColor="var(--accent)" stopOpacity="0.15" />
-        <stop offset="1" stopColor="#8B5CF6" stopOpacity="0.1" />
-      </linearGradient>
-    </defs>
-    <rect x="8" y="8" width="104" height="104" rx="20" fill="url(#ad-bg)" stroke="var(--border)" strokeWidth="1" />
-    {art}
-  </svg>
-)
-
-export function AdIcon({ title }) {
-  const lower = title.toLowerCase()
-  let art
-  if (lower.includes('home')) {
-    art = (
-      <g key="home">
-        <rect x="28" y="48" width="64" height="44" rx="4" fill="var(--surface-inset)" />
-        <path d="M18 54l42-30 42 30" fill="none" stroke="var(--success)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="48" y="66" width="24" height="26" rx="3" fill="var(--accent)" />
-        <circle cx="60" cy="79" r="3" fill="var(--warning)" />
-        <path d="M70 48h16v14h-16z" fill="var(--warning)" />
-      </g>
-    )
-  } else if (lower.includes('wheeler') || lower.includes('vehicle')) {
-    art = (
-      <g key="vehicle">
-        <path d="M20 78c0-9 7-16 16-16h42l10 16" fill="none" stroke="var(--accent)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M70 62l-8-22H42l-6 22" fill="none" stroke="var(--text-secondary)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="38" cy="84" r="10" fill="none" stroke="var(--success)" strokeWidth="5" />
-        <circle cx="82" cy="84" r="10" fill="none" stroke="var(--success)" strokeWidth="5" />
-        <circle cx="38" cy="84" r="3" fill="var(--success)" />
-        <circle cx="82" cy="84" r="3" fill="var(--success)" />
-      </g>
-    )
-  } else if (lower.includes('business')) {
-    art = (
-      <g key="business">
-        <rect x="28" y="44" width="64" height="46" rx="6" fill="var(--surface-inset)" />
-        <path d="M42 44v-8a6 6 0 0 1 6-6h24a6 6 0 0 1 6 6v8" fill="none" stroke="var(--accent)" strokeWidth="5" strokeLinecap="round" />
-        <circle cx="60" cy="68" r="9" fill="none" stroke="var(--success)" strokeWidth="5" />
-        <path d="M55 68l4 4 6-7" fill="none" stroke="var(--success)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-      </g>
-    )
-  } else if (lower.includes('gold')) {
-    art = (
-      <g key="gold">
-        <circle cx="60" cy="62" r="30" fill="var(--warning)" />
-        <circle cx="60" cy="62" r="22" fill="none" stroke="#b45309" strokeWidth="4" />
-        <text x="60" y="70" textAnchor="middle" fontSize="24" fontWeight="700" fill="#78350f">₹</text>
-        <circle cx="60" cy="62" r="8" fill="#fde68a" opacity="0.8" />
-      </g>
-    )
-  } else if (lower.includes('personal') || lower.includes('quick')) {
-    art = (
-      <g key="banknote">
-        <rect x="24" y="40" width="72" height="44" rx="8" fill="var(--accent)" />
-        <rect x="30" y="46" width="60" height="32" rx="5" fill="var(--surface-inset)" />
-        <circle cx="60" cy="62" r="9" fill="none" stroke="var(--warning)" strokeWidth="4" />
-        <text x="60" y="66" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--warning)">₹</text>
-      </g>
-    )
-  } else {
-    art = (
-      <g key="coin">
-        <ellipse cx="60" cy="44" rx="34" ry="12" fill="var(--surface-inset)" />
-        <ellipse cx="60" cy="56" rx="34" ry="12" fill="var(--warning)" />
-        <ellipse cx="60" cy="68" rx="34" ry="12" fill="var(--warning)" />
-        <ellipse cx="60" cy="80" rx="34" ry="12" fill="var(--surface-inset)" />
-        <text x="60" y="72" textAnchor="middle" fontSize="16" fontWeight="700" fill="#78350f">₹</text>
-      </g>
-    )
-  }
-  return iconShell(<g>{art}</g>)
-}
-
-export function HeroArt() {
-  return (
-    <svg viewBox="0 0 360 240" width="360" height="240" role="img" aria-label="Loan illustration" className="hero-art">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="var(--accent)" stopOpacity="0.15" />
-          <stop offset="1" stopColor="var(--success)" stopOpacity="0.08" />
-        </linearGradient>
-        <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#fbbf24" />
-          <stop offset="1" stopColor="#d97706" />
-        </linearGradient>
-        <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="var(--accent)" />
-          <stop offset="1" stopColor="#8B5CF6" />
-        </linearGradient>
-      </defs>
-      <rect x="0" y="0" width="360" height="240" rx="24" fill="url(#sky)" />
-      <circle cx="300" cy="40" r="60" fill="var(--accent)" opacity="0.08" />
-      <circle cx="40" cy="210" r="70" fill="var(--success)" opacity="0.06" />
-      <g transform="translate(40 60)">
-        <path d="M4 96h112M16 96V68h88v28" fill="none" stroke="var(--text-muted)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M10 68l52-34 52 34" fill="none" stroke="var(--success)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-        <g stroke="var(--text-muted)" strokeWidth="5" strokeLinecap="round">
-          <line x1="36" y1="68" x2="36" y2="96" />
-          <line x1="60" y1="68" x2="60" y2="96" />
-          <line x1="84" y1="68" x2="84" y2="96" />
-        </g>
-      </g>
-      <g transform="translate(206 96)">
-        <rect x="0" y="28" width="44" height="34" rx="5" fill="url(#gold)" />
-        <rect x="14" y="8" width="44" height="34" rx="5" fill="url(#gold)" opacity="0.85" />
-        <text x="36" y="31" textAnchor="middle" fontSize="17" fontWeight="800" fill="#78350f">₹</text>
-      </g>
-      <g transform="translate(150 130)">
-        <rect x="0" y="42" width="52" height="36" rx="5" fill="url(#gold)" opacity="0.6" />
-        <rect x="16" y="22" width="52" height="36" rx="5" fill="url(#gold)" opacity="0.85" />
-        <text x="42" y="46" textAnchor="middle" fontSize="17" fontWeight="800" fill="#78350f">₹</text>
-      </g>
-      <path d="M64 196h70" stroke="var(--border-strong)" strokeWidth="3" strokeLinecap="round" />
-      <path d="M64 196l40-44 22 14 30-40" fill="none" stroke="var(--success)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="156" cy="126" r="6" fill="var(--success)" />
-      <path d="M152 112l-3 9 9 3" fill="none" stroke="var(--success)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-      <g transform="rotate(-8 292 170)">
-        <rect x="248" y="150" width="88" height="56" rx="9" fill="url(#cardGrad)" />
-        <rect x="258" y="162" width="26" height="18" rx="3" fill="#fbbf24" />
-        <rect x="258" y="188" width="40" height="7" rx="3.5" fill="white" opacity="0.5" />
-        <path d="M314 160h10M314 168h10" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.4" />
-      </g>
     </svg>
   )
 }

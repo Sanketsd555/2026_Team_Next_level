@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import api from '../api'
 import Layout from '../components/Layout'
-import { AdIcon, HeroArt, Icon } from '../components/Icons'
-import StatCard from '../components/StatCard'
+import { AdIcon, Icon } from '../components/Icons'
 import StatusBadge from '../components/StatusBadge'
 import EmptyState from '../components/EmptyState'
 import LoadingSpinner from '../components/LoadingSpinner'
@@ -16,35 +15,20 @@ export default function UserDashboard() {
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('marketplace')
   const [form, setForm] = useState({
-    bank_id: '',
-    full_name: '',
-    email: '',
-    mobile_number: '',
-    pan_number: '',
-    aadhar_number: '',
-    bank_account_number: '',
-    ifsc_code: '',
-    amount: '',
-    purpose: '',
-    tenure_months: '12',
+    bank_id: '', full_name: '', email: '', mobile_number: '', pan_number: '', 
+    aadhar_number: '', bank_account_number: '', ifsc_code: '', amount: '', purpose: '', tenure_months: '12',
   })
   const [message, setMessage] = useState('')
 
   const refresh = async () => {
     try {
       const [adsR, banksR, appsR] = await Promise.all([
-        api.get('/loan-ads/'),
-        api.get('/banks/'),
-        api.get('/applications/'),
+        api.get('/loan-ads/'), api.get('/banks/'), api.get('/applications/'),
       ])
       setAds(adsR.data)
       setBanks(banksR.data)
       setApplications(appsR.data)
-    } catch {
-      /* keep existing data */
-    } finally {
-      setLoading(false)
-    }
+    } catch { /* ignore */ } finally { setLoading(false) }
   }
 
   useEffect(() => { refresh() }, [])
@@ -54,180 +38,125 @@ export default function UserDashboard() {
     setMessage('')
     try {
       await api.post('/applications/', {
-        ...form,
-        bank_id: Number(form.bank_id),
-        amount: Number(form.amount),
-        tenure_months: Number(form.tenure_months),
+        ...form, bank_id: Number(form.bank_id), amount: Number(form.amount), tenure_months: Number(form.tenure_months),
       })
       setForm({
-        bank_id: '', full_name: '', email: '', mobile_number: '',
-        pan_number: '', aadhar_number: '', bank_account_number: '',
-        ifsc_code: '', amount: '', purpose: '', tenure_months: '12',
+        bank_id: '', full_name: '', email: '', mobile_number: '', pan_number: '', 
+        aadhar_number: '', bank_account_number: '', ifsc_code: '', amount: '', purpose: '', tenure_months: '12',
       })
       setMessage('Application submitted successfully!')
       await refresh()
-    } catch {
-      setMessage('')
-    }
+    } catch { setMessage('') }
   }
 
   const navItems = [
-    { id: 'marketplace', icon: 'card', label: 'Loan Marketplace', active: activeTab === 'marketplace', onClick: () => setActiveTab('marketplace') },
-    { id: 'apply', icon: 'send', label: 'Apply for Loan', active: activeTab === 'apply', onClick: () => setActiveTab('apply') },
+    { id: 'marketplace', icon: 'card', label: 'Marketplace', active: activeTab === 'marketplace', onClick: () => setActiveTab('marketplace') },
+    { id: 'apply', icon: 'send', label: 'Apply', active: activeTab === 'apply', onClick: () => setActiveTab('apply') },
     { id: 'applications', icon: 'doc', label: 'My Applications', active: activeTab === 'applications', onClick: () => setActiveTab('applications') },
   ]
 
-  if (loading) {
-    return (
-      <Layout title="User Dashboard" navItems={navItems}>
-        <LoadingSpinner text="Loading dashboard..." size="lg" />
-      </Layout>
-    )
-  }
+  if (loading) return <Layout title="Dashboard" navItems={navItems}><LoadingSpinner text="Loading data..." /></Layout>
 
   return (
-    <Layout title="User Dashboard" subtitle="Browse offers and apply" navItems={navItems}>
-      {/* Hero Banner */}
+    <Layout title="Dashboard" navItems={navItems}>
+      {/* Stark Hero Section */}
       <div className="hero-banner animate-fade-in-up">
-        <div className="hero-banner-content">
-          <div className="eyebrow">LoanFlow Marketplace</div>
-          <h2>Find the right loan for your needs</h2>
-          <p>Compare offers from partner banks — check rates, calculate EMIs, and apply in minutes.</p>
-          <div className="hero-stats-row">
-            <div className="hero-stat">
-              <div className="hero-stat-icon"><Icon name="card" size={16} /></div>
-              <div className="hero-stat-data">
-                <strong>{ads.length}</strong>
-                <span>Loan Ads</span>
-              </div>
-            </div>
-            <div className="hero-stat">
-              <div className="hero-stat-icon"><Icon name="bank" size={16} /></div>
-              <div className="hero-stat-data">
-                <strong>{banks.length}</strong>
-                <span>Banks</span>
-              </div>
-            </div>
-            <div className="hero-stat">
-              <div className="hero-stat-icon"><Icon name="doc" size={16} /></div>
-              <div className="hero-stat-data">
-                <strong>{applications.length}</strong>
-                <span>Applications</span>
-              </div>
-            </div>
+        <div className="eyebrow">Marketplace Overview</div>
+        <h2 style={{ fontSize: '20px', fontWeight: 600, marginBottom: '8px' }}>Loan Offerings & Applications</h2>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '13px', maxWidth: '600px' }}>
+          Compare offerings from partner banks and track your active loan applications.
+        </p>
+        <div className="hero-stats-row">
+          <div className="hero-stat-data">
+            <strong>{ads.length}</strong>
+            <span>Active Offers</span>
+          </div>
+          <div className="hero-stat-data">
+            <strong>{banks.length}</strong>
+            <span>Partner Banks</span>
+          </div>
+          <div className="hero-stat-data">
+            <strong>{applications.length}</strong>
+            <span>My Applications</span>
           </div>
         </div>
-        <HeroArt />
       </div>
 
-      {/* Marketplace Tab */}
       {activeTab === 'marketplace' && (
         <div className="card animate-fade-in">
           <div className="card-header">
-            <div className="card-title"><Icon name="card" size={18} /> Loan Advertisements</div>
+            <div className="card-title">Available Loans</div>
           </div>
           <div className="stack">
-            {ads.length ? ads.map((ad, i) => (
-              <div className="ad-card animate-fade-in-up" key={ad.id} style={{ animationDelay: `${i * 0.05}s` }}>
-                <div className="ad-card-icon"><AdIcon title={ad.title} /></div>
-                <div className="ad-card-body">
-                  <div className="eyebrow">{ad.bank_name}</div>
-                  <h4>{ad.title}</h4>
-                  <p>{ad.description}</p>
-                  <div className="ad-card-meta">APR {ad.apr}% &nbsp;|&nbsp; {fmtINR(ad.min_amount)} – {fmtINR(ad.max_amount)}</div>
+            {ads.length ? ads.map((ad) => (
+              <div className="bank-item" key={ad.id}>
+                <AdIcon title={ad.title} />
+                <div style={{ flex: 1 }}>
+                  <div className="row-between">
+                    <h4 style={{ fontSize: '14px', marginBottom: '4px' }}>{ad.title}</h4>
+                    <span style={{ fontSize: '13px', fontWeight: 600 }}>{fmtINR(ad.min_amount)} – {fmtINR(ad.max_amount)}</span>
+                  </div>
+                  <div className="row-between">
+                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>{ad.bank_name} • APR: {ad.apr}%</p>
+                    <p style={{ fontSize: '13px', color: 'var(--text-tertiary)' }}>{ad.description}</p>
+                  </div>
                 </div>
               </div>
-            )) : (
-              <EmptyState icon="card" title="No loan advertisements" message="Check back later for new offers from banks." />
-            )}
+            )) : <EmptyState title="No offers found" />}
           </div>
         </div>
       )}
 
-      {/* Apply Tab */}
       {activeTab === 'apply' && (
-        <div className="card animate-fade-in">
+        <div className="card animate-fade-in" style={{ maxWidth: '800px' }}>
           <div className="card-header">
-            <div className="card-title"><Icon name="send" size={18} /> Loan Application</div>
+            <div className="card-title">New Application</div>
           </div>
           <form onSubmit={submitApplication}>
-            <div className="form-grid">
-              <div className="field full-span">
-                <label className="field-label"><Icon name="bank" size={14} /> Bank</label>
+            <div className="grid-2">
+              <div className="field" style={{ gridColumn: '1 / -1' }}>
+                <label className="field-label">Target Bank</label>
                 <select value={form.bank_id} onChange={(e) => setForm({ ...form, bank_id: e.target.value })} required>
-                  <option value="">Choose a bank</option>
+                  <option value="">Select a bank</option>
                   {banks.map((b) => <option value={b.id} key={b.id}>{b.organization || b.username}</option>)}
                 </select>
               </div>
-              <div className="field">
-                <label className="field-label"><Icon name="user" size={14} /> Full Name</label>
-                <input value={form.full_name} onChange={(e) => setForm({ ...form, full_name: e.target.value })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="email" size={14} /> Email</label>
-                <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="phone" size={14} /> Mobile Number</label>
-                <input type="tel" pattern="[0-9]{10}" maxLength="10" placeholder="10-digit mobile" value={form.mobile_number} onChange={(e) => setForm({ ...form, mobile_number: e.target.value })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="card" size={14} /> PAN Number</label>
-                <input maxLength="10" placeholder="e.g. ABCDE1234F" value={form.pan_number} onChange={(e) => setForm({ ...form, pan_number: e.target.value.toUpperCase() })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="card" size={14} /> Aadhaar Number</label>
-                <input type="tel" pattern="[0-9]{12}" maxLength="12" placeholder="12-digit Aadhaar" value={form.aadhar_number} onChange={(e) => setForm({ ...form, aadhar_number: e.target.value })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="wallet" size={14} /> Bank Account</label>
-                <input placeholder="Account number" value={form.bank_account_number} onChange={(e) => setForm({ ...form, bank_account_number: e.target.value })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="landmark" size={14} /> IFSC Code</label>
-                <input maxLength="11" placeholder="e.g. HDFC0001234" value={form.ifsc_code} onChange={(e) => setForm({ ...form, ifsc_code: e.target.value.toUpperCase() })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="rupee" size={14} /> Amount (₹)</label>
-                <input type="number" min="100" placeholder="e.g. 500000" value={form.amount} onChange={(e) => setForm({ ...form, amount: e.target.value })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="doc" size={14} /> Purpose</label>
-                <input placeholder="e.g. Home renovation" value={form.purpose} onChange={(e) => setForm({ ...form, purpose: e.target.value })} required />
-              </div>
-              <div className="field">
-                <label className="field-label"><Icon name="calendar" size={14} /> Tenure (months)</label>
-                <input type="number" min="1" value={form.tenure_months} onChange={(e) => setForm({ ...form, tenure_months: e.target.value })} required />
-              </div>
+              <div className="field"><label className="field-label">Full Name</label><input value={form.full_name} onChange={(e) => setForm({ ...form, full_name: e.target.value })} required /></div>
+              <div className="field"><label className="field-label">Email</label><input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required /></div>
+              <div className="field"><label className="field-label">Mobile</label><input type="tel" pattern="[0-9]{10}" maxLength="10" value={form.mobile_number} onChange={(e) => setForm({ ...form, mobile_number: e.target.value })} required /></div>
+              <div className="field"><label className="field-label">PAN</label><input maxLength="10" value={form.pan_number} onChange={(e) => setForm({ ...form, pan_number: e.target.value.toUpperCase() })} required /></div>
+              <div className="field"><label className="field-label">Aadhaar</label><input type="tel" pattern="[0-9]{12}" maxLength="12" value={form.aadhar_number} onChange={(e) => setForm({ ...form, aadhar_number: e.target.value })} required /></div>
+              <div className="field"><label className="field-label">Account No</label><input value={form.bank_account_number} onChange={(e) => setForm({ ...form, bank_account_number: e.target.value })} required /></div>
+              <div className="field"><label className="field-label">IFSC Code</label><input maxLength="11" value={form.ifsc_code} onChange={(e) => setForm({ ...form, ifsc_code: e.target.value.toUpperCase() })} required /></div>
+              <div className="field"><label className="field-label">Amount (₹)</label><input type="number" min="100" value={form.amount} onChange={(e) => setForm({ ...form, amount: e.target.value })} required /></div>
+              <div className="field"><label className="field-label">Purpose</label><input value={form.purpose} onChange={(e) => setForm({ ...form, purpose: e.target.value })} required /></div>
+              <div className="field"><label className="field-label">Tenure (mo)</label><input type="number" min="1" value={form.tenure_months} onChange={(e) => setForm({ ...form, tenure_months: e.target.value })} required /></div>
             </div>
-            <div style={{ marginTop: '1rem' }}>
-              <button className="btn-full btn-lg" type="submit">
-                <Icon name="send" size={15} /> Submit Application
-              </button>
+            <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <button className="btn-full" type="submit">Submit</button>
+              {message && <span className="text-sm" style={{ color: 'var(--success)' }}>{message}</span>}
             </div>
-            {message && <div className="alert success" style={{ marginTop: '0.75rem' }}><Icon name="check" size={14} /> {message}</div>}
           </form>
         </div>
       )}
 
-      {/* Applications Tab */}
       {activeTab === 'applications' && (
         <div className="card animate-fade-in">
           <div className="card-header">
-            <div className="card-title"><Icon name="doc" size={18} /> My Applications</div>
+            <div className="card-title">My Applications</div>
           </div>
           <div className="stack">
-            {applications.length ? applications.map((app, i) => (
-              <div className="app-card animate-fade-in-up" key={app.id} style={{ animationDelay: `${i * 0.05}s` }}>
-                <div className="app-card-header">
-                  <h4>{app.purpose}</h4>
-                  <StatusBadge status={app.status} />
+            {applications.length ? applications.map((app) => (
+              <div className="bank-item" key={app.id}>
+                <div style={{ flex: 1 }}>
+                  <div className="row-between">
+                    <h4 style={{ fontSize: '14px', marginBottom: '4px' }}>{app.purpose}</h4>
+                    <StatusBadge status={app.status} />
+                  </div>
+                  <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>{fmtINR(app.amount)} from {app.bank.username}</p>
                 </div>
-                <p className="text-secondary text-sm">{fmtINR(app.amount)} requested from {app.bank.username}</p>
               </div>
-            )) : (
-              <EmptyState icon="doc" title="No applications yet" message="Pick a bank and submit your first loan application." />
-            )}
+            )) : <EmptyState title="No applications yet" />}
           </div>
         </div>
       )}

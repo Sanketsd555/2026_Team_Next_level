@@ -4,7 +4,6 @@ import { Icon } from './Icons'
 import ThemeToggle from './ThemeToggle'
 
 const roleLabels = { user: 'User', bank: 'Bank', admin: 'Admin' }
-const roleIcons = { user: 'user', bank: 'bank', admin: 'admin' }
 
 export default function Layout({ title, subtitle, children, navItems = [] }) {
   const { user, logout } = useAuth()
@@ -18,13 +17,11 @@ export default function Layout({ title, subtitle, children, navItems = [] }) {
         <div className="main-content">
           <header className="topbar">
             <div className="topbar-left">
-              <div className="row" style={{ gap: '0.625rem' }}>
-                <div className="sidebar-brand-icon">
-                  <Icon name="trending" size={18} />
-                </div>
-                <div>
-                  <div className="topbar-title">{title || 'LoanFlow'}</div>
-                  {subtitle && <div className="topbar-subtitle">{subtitle}</div>}
+              <div className="row" style={{ gap: '12px' }}>
+                <div style={{ width: 24, height: 24, background: 'var(--accent)', color: 'var(--text-inverted)', display: 'grid', placeItems: 'center', borderRadius: 4 }}>LF</div>
+                <div className="row" style={{ gap: '8px' }}>
+                  <span className="topbar-title">{title || 'LoanFlow'}</span>
+                  {subtitle && <span className="topbar-subtitle">{subtitle}</span>}
                 </div>
               </div>
             </div>
@@ -32,13 +29,8 @@ export default function Layout({ title, subtitle, children, navItems = [] }) {
               <ThemeToggle />
               {user && (
                 <>
-                  <span className={`role-badge ${user.role}`}>
-                    <Icon name={roleIcons[user.role]} size={12} />
-                    {roleLabels[user.role]}
-                  </span>
-                  <button className="btn-ghost btn-sm" onClick={logout}>
-                    <Icon name="logout" size={14} /> Logout
-                  </button>
+                  <span className="role-badge">{roleLabels[user.role]}</span>
+                  <button className="btn-ghost btn-sm" onClick={logout}>Logout</button>
                 </>
               )}
             </div>
@@ -51,51 +43,41 @@ export default function Layout({ title, subtitle, children, navItems = [] }) {
 
   return (
     <div className="app-shell">
-      {/* Sidebar overlay for mobile */}
-      <div
-        className={`sidebar-overlay ${sidebarOpen ? 'open' : ''}`}
-        onClick={() => setSidebarOpen(false)}
-      />
+      {/* Mobile Overlay */}
+      {sidebarOpen && <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 35 }} onClick={() => setSidebarOpen(false)} />}
 
       {/* Sidebar */}
       <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-brand">
-          <div className="sidebar-brand-icon">
-            <Icon name="trending" size={18} />
-          </div>
+          <div className="sidebar-brand-icon">LF</div>
           <div className="sidebar-brand-text">
             <span className="sidebar-brand-name">LoanFlow</span>
-            <span className="sidebar-brand-sub">{roleLabels[user.role]} Dashboard</span>
+            <span className="sidebar-brand-sub">{roleLabels[user.role]} Console</span>
           </div>
         </div>
 
         <nav className="sidebar-nav">
-          <div className="sidebar-section-label">Navigation</div>
+          <div className="sidebar-section-label">Menu</div>
           {navItems.map((item) => (
             <button
               key={item.id}
               className={`sidebar-link ${item.active ? 'active' : ''}`}
-              onClick={() => {
-                item.onClick?.()
-                setSidebarOpen(false)
-              }}
+              onClick={() => { item.onClick?.(); setSidebarOpen(false) }}
             >
-              <Icon name={item.icon} size={18} />
+              <Icon name={item.icon} size={14} />
               {item.label}
             </button>
           ))}
         </nav>
 
-        <div className="sidebar-footer">
-          <div className="sidebar-user">
-            <div className={`avatar ${user.role === 'bank' ? 'warning' : user.role === 'admin' ? 'accent' : 'success'}`}>
-              <Icon name={roleIcons[user.role]} size={16} />
-            </div>
-            <div className="sidebar-user-info">
-              <div className="sidebar-user-name">{user.username}</div>
-              <div className="sidebar-user-role">{roleLabels[user.role]}</div>
-            </div>
+        <div style={{ padding: '16px', borderTop: '1px solid var(--border-light)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div>
+            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)' }}>{user.username}</div>
+            <div style={{ fontSize: '11px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{roleLabels[user.role]}</div>
           </div>
+          <button className="btn-ghost btn-sm" onClick={logout} style={{ padding: '0 8px' }}>
+            <Icon name="logout" size={14} />
+          </button>
         </div>
       </aside>
 
@@ -104,18 +86,15 @@ export default function Layout({ title, subtitle, children, navItems = [] }) {
         <header className="topbar">
           <div className="topbar-left">
             <button className="mobile-menu-btn" onClick={() => setSidebarOpen(true)}>
-              <Icon name="menu" size={20} />
+              <Icon name="menu" size={16} />
             </button>
-            <div>
-              <div className="topbar-title">{title}</div>
-              {subtitle && <div className="topbar-subtitle">{subtitle}</div>}
+            <div className="row" style={{ gap: '8px' }}>
+              <span className="topbar-title">{title}</span>
+              {subtitle && <span className="topbar-subtitle">{subtitle}</span>}
             </div>
           </div>
           <div className="topbar-right">
             <ThemeToggle />
-            <button className="btn-ghost btn-sm" onClick={logout}>
-              <Icon name="logout" size={14} /> Logout
-            </button>
           </div>
         </header>
         <div className="page-content">{children}</div>
