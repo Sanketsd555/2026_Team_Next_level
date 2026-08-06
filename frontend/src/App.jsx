@@ -245,6 +245,9 @@ function UserDashboard() {
     tenure_months: '12',
   })
   const [message, setMessage] = useState('')
+  const [borrowerCheck, setBorrowerCheck] = useState(null)
+  const [borrowerCheckError, setBorrowerCheckError] = useState('')
+  const [borrowerCheckBusy, setBorrowerCheckBusy] = useState(false)
 
   const refresh = async () => {
     const [adsResponse, banksResponse, applicationsResponse] = await Promise.all([
@@ -284,7 +287,30 @@ function UserDashboard() {
       tenure_months: '12',
     })
     setMessage('Application submitted successfully.')
+    setBorrowerCheck(null)
+    setBorrowerCheckError('')
     await refresh()
+  }
+
+  const checkBorrowerHistory = async (aadharNumber) => {
+    if (!/^\d{12}$/.test(aadharNumber)) {
+      setBorrowerCheck(null)
+      setBorrowerCheckError('')
+      return
+    }
+    setBorrowerCheckBusy(true)
+    setBorrowerCheckError('')
+    try {
+      const response = await api.get('/applications/borrower-check/', {
+        params: { aadhar_number: aadharNumber },
+      })
+      setBorrowerCheck(response.data)
+    } catch (error) {
+      setBorrowerCheck(null)
+      setBorrowerCheckError(error.response?.data?.detail || 'Could not check borrower history right now.')
+    } finally {
+      setBorrowerCheckBusy(false)
+    }
   }
 
   return (
@@ -370,8 +396,32 @@ function UserDashboard() {
               </label>
               <label>
                 <span className="field-label"><Icon name="card" size={14} /> Aadhaar card number</span>
-                <input type="tel" pattern="[0-9]{12}" maxLength="12" placeholder="12-digit Aadhaar number" value={form.aadhar_number} onChange={(event) => setForm({ ...form, aadhar_number: event.target.value })} required />
+                <input
+                  type="tel"
+                  pattern="[0-9]{12}"
+                  maxLength="12"
+                  placeholder="12-digit Aadhaar number"
+                  value={form.aadhar_number}
+                  onChange={(event) => {
+                    const next = event.target.value.replace(/\D/g, '')
+                    setForm({ ...form, aadhar_number: next })
+                    if (next.length !== 12) {
+                      setBorrowerCheck(null)
+                      setBorrowerCheckError('')
+                    }
+                  }}
+                  onBlur={(event) => checkBorrowerHistory(event.target.value)}
+                  required
+                />
               </label>
+              {form.aadhar_number.length === 12 && borrowerCheckBusy ? <p className="info-text full">Checking borrower hash history...</p> : null}
+              {borrowerCheckError ? <p className="error-text full">{borrowerCheckError}</p> : null}
+              {borrowerCheck ? (
+                <p className={`info-text full ${borrowerCheck.loan_count > 0 ? 'warn' : 'safe'}`}>
+                  Borrower hash: <code>{borrowerCheck.borrower_hash}</code> | On-chain loans: {borrowerCheck.loan_count}
+                  {borrowerCheck.loan_hashes?.length ? ` | Loan hashes: ${borrowerCheck.loan_hashes.join(', ')}` : ''}
+                </p>
+              ) : null}
               <label>
                 <span className="field-label"><Icon name="wallet" size={14} /> Bank account number</span>
                 <input placeholder="Account number" value={form.bank_account_number} onChange={(event) => setForm({ ...form, bank_account_number: event.target.value })} required />
@@ -407,6 +457,7 @@ function UserDashboard() {
                 <div>
                   <h4>{application.purpose}</h4>
                   <p>{fmtINR(application.amount)} requested from {application.bank.username}</p>
+                  {application.blockchain_tx_hash ? <p className="muted small">Tx: {application.blockchain_tx_hash}</p> : null}
                 </div>
                 <span className={`status-pill ${application.status}`}>
                   <Icon name={application.status === 'approved' ? 'check' : application.status === 'rejected' ? 'cross' : 'clock'} size={11} />
@@ -475,6 +526,7 @@ function BankDashboard() {
                 </div>
                 <p><strong>{fmtINR(application.amount)}</strong> for {application.purpose}</p>
                 <p className="muted small">Tenure: {application.tenure_months} months | Email: {application.email} | Mobile: {application.mobile_number}</p>
+                {application.blockchain_tx_hash ? <p className="muted small">Tx: {application.blockchain_tx_hash}</p> : null}
                 <div className="kyc-details">
                   <span>PAN: {application.pan_number}</span>
                   <span>Aadhaar: {application.aadhar_number}</span>
@@ -496,6 +548,7 @@ function BankDashboard() {
 
 function AdminDashboard() {
   const [summary, setSummary] = useState({ users: [], banks: [], counts: {} })
+  const [applications, setApplications] = useState([])
   const [bankForm, setBankForm] = useState({ username: '', organization: '', password: '' })
   const [editingId, setEditingId] = useState(null)
   const [editForm, setEditForm] = useState({ organization: '', password: '' })
@@ -504,8 +557,12 @@ function AdminDashboard() {
   const [adminBusy, setAdminBusy] = useState(false)
 
   const refresh = async () => {
-    const response = await api.get('/admin/summary/')
-    setSummary(response.data)
+    const [summaryResponse, applicationsResponse] = await Promise.all([
+      api.get('/admin/summary/'),
+      api.get('/applications/'),
+    ])
+    setSummary(summaryResponse.data)
+    setApplications(applicationsResponse.data)
   }
 
   useEffect(() => {
@@ -566,6 +623,21 @@ function AdminDashboard() {
       setAdminError(error.response?.data?.detail || 'Could not delete the bank.')
     } finally {
       setAdminBusy(false)
+    }
+
+    const updateApplicationStatus = async (applicationId, status) => {
+      setAdminBusy(true)
+      setAdminMsg('')
+      setAdminError('')
+      try {
+        await api.patch(`/applications/${applicationId}/`, { status })
+        setAdminMsg(`Application marked as ${status}.`)
+        await refresh()
+      } catch (error) {
+        setAdminError(error.response?.data?.detail || `Could not mark application as ${status}.`)
+      } finally {
+        setAdminBusy(false)
+      }
     }
   }
 
@@ -663,6 +735,36 @@ function AdminDashboard() {
           </div>
           {adminMsg ? <p className="success-text"><Icon name="check" size={13} /> {adminMsg}</p> : null}
           {adminError ? <p className="error-text">{adminError}</p> : null}
+        </div>
+      </section>
+      <section className="panel">
+        <h3 className="panel-head"><PanelIcon name="apps" /> Application approvals</h3>
+        <div className="stack">
+          {applications.length ? applications.map((application) => (
+            <article className="mini-card" key={application.id}>
+              <div className="row">
+                <div>
+                  <p className="card-label">{application.applicant.username}</p>
+                  <h4>{application.full_name}</h4>
+                </div>
+                <span className={`status-pill ${application.status}`}>
+                  <Icon name={application.status === 'approved' ? 'check' : application.status === 'rejected' ? 'cross' : 'clock'} size={11} />
+                  {application.status}
+                </span>
+              </div>
+              <p><strong>{fmtINR(application.amount)}</strong> for {application.purpose}</p>
+              <p className="muted small">Bank: {application.bank.organization || application.bank.username}</p>
+              {application.blockchain_tx_hash ? <p className="muted small">Tx: {application.blockchain_tx_hash}</p> : null}
+              <div className="card-actions">
+                <button className="approve-btn" onClick={() => updateApplicationStatus(application.id, 'approved')} disabled={adminBusy}>
+                  <Icon name="check" size={14} /> Approve
+                </button>
+                <button className="reject-btn" onClick={() => updateApplicationStatus(application.id, 'rejected')} disabled={adminBusy}>
+                  <Icon name="cross" size={14} /> Reject
+                </button>
+              </div>
+            </article>
+          )) : <div className="app-empty">No applications available for admin review.</div>}
         </div>
       </section>
       <section className="panel">

@@ -947,7 +947,8 @@ select:focus {
 }
 
 .error-text,
-.success-text {
+.success-text,
+.info-text {
   margin: 0;
   padding: 0.6rem 0.8rem;
   border-radius: 6px;
@@ -963,6 +964,24 @@ select:focus {
 .success-text {
   background: var(--green-bg);
   border: 1px solid var(--green-border);
+  color: var(--green);
+}
+
+.info-text {
+  background: var(--blue-bg);
+  border: 1px solid var(--blue-border);
+  color: #8dbbff;
+}
+
+.info-text.warn {
+  background: var(--amber-bg);
+  border-color: var(--amber-border);
+  color: var(--amber);
+}
+
+.info-text.safe {
+  background: var(--green-bg);
+  border-color: var(--green-border);
   color: var(--green);
 }
 

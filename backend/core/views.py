@@ -5,6 +5,12 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from .blockchain import (
+    BlockchainConfigError,
+    build_borrower_hash,
+    build_loan_hash,
+    get_blockchain_client,
+)
 from .models import User
 from .mongomodels import LoanAdvertisement, LoanApplication
 from .serializers import LoanAdvertisementSerializer, LoanApplicationSerializer, RegisterSerializer, UserSerializer
@@ -200,6 +206,11 @@ class LoanApplicationListCreateView(APIView):
         bank = User.objects.filter(pk=bank_id, role=User.Role.BANK).first()
         if not bank:
             return Response({"detail": "Invalid bank."}, status=status.HTTP_400_BAD_REQUEST)
+        aadhar_number = request.data.get("aadhar_number", "")
+        try:
+            borrower_hash = build_borrower_hash(aadhar_number)
+        except ValueError as error:
+            return Response({"detail": str(error)}, status=status.HTTP_400_BAD_REQUEST)
         application = LoanApplication(
             applicant_username=request.user.username,
             applicant_email=request.user.email,
@@ -210,7 +221,8 @@ class LoanApplicationListCreateView(APIView):
             email=request.data.get("email", ""),
             mobile_number=request.data.get("mobile_number", ""),
             pan_number=request.data.get("pan_number", ""),
-            aadhar_number=request.data.get("aadhar_number", ""),
+            aadhar_number=aadhar_number,
+            borrower_hash=borrower_hash,
             bank_account_number=request.data.get("bank_account_number", ""),
             ifsc_code=request.data.get("ifsc_code", ""),
             amount=int(request.data.get("amount") or 0),
@@ -218,7 +230,48 @@ class LoanApplicationListCreateView(APIView):
             tenure_months=int(request.data.get("tenure_months") or 12),
         )
         application.save()
+        application.loan_hash = build_loan_hash(application.id)
+        application.save()
         return Response(LoanApplicationSerializer(application).data, status=status.HTTP_201_CREATED)
+
+
+class BorrowerRiskCheckView(APIView):
+    def get(self, request):
+        if request.user.role != User.Role.USER:
+            return Response({"detail": "Only users can check borrower history."}, status=status.HTTP_403_FORBIDDEN)
+
+        aadhar_number = request.query_params.get("aadhar_number", "")
+        try:
+            borrower_hash = build_borrower_hash(aadhar_number)
+            blockchain = get_blockchain_client()
+            loan_hashes = blockchain.get_borrower_loans(borrower_hash)
+            loan_count = blockchain.get_loan_count(borrower_hash)
+            high_risk = blockchain.is_high_risk(borrower_hash)
+        except ValueError as error:
+            return Response({"detail": str(error)}, status=status.HTTP_400_BAD_REQUEST)
+        except (BlockchainConfigError, RuntimeError) as error:
+            return Response({"detail": str(error)}, status=status.HTTP_502_BAD_GATEWAY)
+
+        local_matches = LoanApplication.objects(borrower_hash=borrower_hash).order_by("-created_at")
+        local_entries = [
+            {
+                "id": str(application.id),
+                "status": application.status,
+                "purpose": application.purpose,
+                "loan_hash": application.loan_hash,
+                "blockchain_tx_hash": application.blockchain_tx_hash,
+            }
+            for application in local_matches
+        ]
+        return Response(
+            {
+                "borrower_hash": borrower_hash,
+                "loan_hashes": loan_hashes,
+                "loan_count": loan_count,
+                "is_high_risk": high_risk,
+                "local_matches": local_entries,
+            }
+        )
 
 
 class LoanApplicationDetailView(APIView):
@@ -233,6 +286,36 @@ class LoanApplicationDetailView(APIView):
         status_value = request.data.get("status")
         if status_value not in {"pending", "approved", "rejected"}:
             return Response({"detail": "Invalid status."}, status=status.HTTP_400_BAD_REQUEST)
+
+        if not application.borrower_hash:
+            try:
+                application.borrower_hash = build_borrower_hash(application.aadhar_number)
+            except ValueError as error:
+                return Response({"detail": str(error)}, status=status.HTTP_400_BAD_REQUEST)
+        if not application.loan_hash:
+            application.loan_hash = build_loan_hash(application.id)
+
+        if status_value == "approved" and not application.blockchain_tx_hash:
+            try:
+                blockchain = get_blockchain_client()
+                existing_loan_count = blockchain.get_loan_count(application.borrower_hash)
+                risk_score = min(existing_loan_count * 20, 100)
+                fraud_status = 1 if risk_score >= 60 else 0
+                ai_reason = f"Borrower has {existing_loan_count} existing blockchain loan(s)."
+                tx_result = blockchain.register_loan(
+                    borrower_hash=application.borrower_hash,
+                    loan_hash=application.loan_hash,
+                    lender_id=application.bank_username,
+                    amount=application.amount,
+                    risk_score=risk_score,
+                    fraud_status=fraud_status,
+                    ai_reason=ai_reason,
+                )
+            except (BlockchainConfigError, RuntimeError) as error:
+                return Response({"detail": str(error)}, status=status.HTTP_502_BAD_GATEWAY)
+            application.blockchain_tx_hash = tx_result["tx_hash"]
+            application.blockchain_network = tx_result["network"]
+
         application.status = status_value
         application.updated_at = datetime.utcnow()
         application.save()
