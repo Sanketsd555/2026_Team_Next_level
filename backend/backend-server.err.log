@@ -1,0 +1,698 @@
+[07/Aug/2026 06:26:06] "DELETE /api/applications/6a750eee7dd8292fd0e6b200/ HTTP/1.1" 500 145
+[07/Aug/2026 06:26:13] "OPTIONS /api/applications/6a750eeb7dd8292fd0e6b1fd/ HTTP/1.1" 200 0
+[07/Aug/2026 06:26:13] "PATCH /api/applications/6a750eeb7dd8292fd0e6b1fd/ HTTP/1.1" 500 145
+[07/Aug/2026 06:26:14] "PATCH /api/applications/6a750eeb7dd8292fd0e6b1fd/ HTTP/1.1" 500 145
+[07/Aug/2026 06:26:14] "PATCH /api/applications/6a750eeb7dd8292fd0e6b1fd/ HTTP/1.1" 500 145
+[07/Aug/2026 06:26:29] "GET /api/auth/me/ HTTP/1.1" 500 145
+[07/Aug/2026 06:26:29] "GET /api/auth/me/ HTTP/1.1" 500 145
+[07/Aug/2026 06:30:11] "POST /api/auth/login/ HTTP/1.1" 500 145
+[07/Aug/2026 06:30:12] "DELETE /api/applications/6a750eee7dd8292fd0e6b200/ HTTP/1.1" 401 59
+[07/Aug/2026 06:30:12,074] - Broken pipe from ('127.0.0.1', 57874)
+[07/Aug/2026 06:32:52] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 06:32:52] "DELETE /api/applications/6a74055ce478423aa8d311bb/ HTTP/1.1" 200 58
+[07/Aug/2026 06:32:52,843] - Broken pipe from ('127.0.0.1', 55899)
+[07/Aug/2026 06:33:19] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 06:33:19,613] - Broken pipe from ('127.0.0.1', 57952)
+[07/Aug/2026 06:33:37] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2026 06:33:38] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2026 06:33:38,185] - Broken pipe from ('127.0.0.1', 57957)
+[07/Aug/2026 06:33:38] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[07/Aug/2026 06:33:38] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:38] "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:38] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:38] "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+[07/Aug/2026 06:33:38] "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:38] "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:38] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:38] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[07/Aug/2026 06:33:42] "GET /favicon.ico HTTP/1.1" 404 179
+[07/Aug/2026 06:33:45] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2026 06:33:45] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[07/Aug/2026 06:33:45] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:45] "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:45] "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+[07/Aug/2026 06:33:45] "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:45] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:45] "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:45] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[07/Aug/2026 06:33:49] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2026 06:33:49] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[07/Aug/2026 06:33:49] "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:49] "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+[07/Aug/2026 06:33:49] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:49] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:49,995] - Broken pipe from ('127.0.0.1', 59471)
+[07/Aug/2026 06:33:49] "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[07/Aug/2026 06:33:49] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[07/Aug/2026 06:33:50] "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[07/Aug/2026 06:34:35] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2026 06:34:35] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[07/Aug/2026 06:34:48] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4341
+[07/Aug/2026 06:34:59] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[07/Aug/2026 06:34:59] "GET /admin/ HTTP/1.1" 200 7657
+[07/Aug/2026 06:34:59] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:34:59] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 11800
+[07/Aug/2026 06:35:02] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:02] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /admin/auth/group/ HTTP/1.1" 200 9114
+[07/Aug/2026 06:35:11] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:11] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 06:35:11] "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /admin/core/user/ HTTP/1.1" 200 14134
+[07/Aug/2026 06:35:13] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13,621] - Broken pipe from ('127.0.0.1', 49976)
+[07/Aug/2026 06:35:13] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 06:35:13] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:13] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /admin/core/user/1/change/ HTTP/1.1" 200 25396
+[07/Aug/2026 06:35:17] "GET /static/admin/css/forms.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/SelectBox.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/calendar.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 06:35:17] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/js/change_form.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:17] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /admin/core/user/ HTTP/1.1" 200 14134
+[07/Aug/2026 06:35:22] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22,951] - Broken pipe from ('127.0.0.1', 54997)
+[07/Aug/2026 06:35:22] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 06:35:22] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:22] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /admin/core/user/?role__exact=bank HTTP/1.1" 200 14332
+[07/Aug/2026 06:35:26] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 06:35:26] "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:26] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 06:35:47] "POST /api/auth/register/ HTTP/1.1" 201 178
+[07/Aug/2026 06:35:47] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 06:35:47] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 06:35:47] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:35:47] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 06:35:47] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 06:35:47] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:35:53] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2026 06:35:53] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[07/Aug/2026 06:35:53] "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/js/theme.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[07/Aug/2026 06:35:53] "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[07/Aug/2026 06:36:05] "POST /api/auth/register/ HTTP/1.1" 400 58
+[07/Aug/2026 06:36:07] "POST /api/auth/login/ HTTP/1.1" 200 178
+[07/Aug/2026 06:36:07] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 06:36:07] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 06:36:07] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:36:07] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 06:36:07] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 06:36:07] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:37:03] "GET /api/auth/me/ HTTP/1.1" 200 118
+[07/Aug/2026 06:37:03] "GET /api/auth/me/ HTTP/1.1" 200 118
+[07/Aug/2026 06:37:03] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 06:37:03] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:37:03] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 06:37:03] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 06:37:03] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:37:03] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 06:44:42] "POST /api/auth/register/ HTTP/1.1" 201 169
+[07/Aug/2026 06:44:42] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:44:42] "POST /api/applications/ HTTP/1.1" 201 947
+[07/Aug/2026 06:44:44] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 06:44:44] "POST /api/applications/6a7531828c4ffc41e216914d/ HTTP/1.1" 200 371
+[07/Aug/2026 06:44:44,139] - Broken pipe from ('127.0.0.1', 51499)
+[07/Aug/2026 06:45:33] "POST /api/applications/ HTTP/1.1" 201 965
+[07/Aug/2026 06:45:33] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 06:45:33] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:45:33] "GET /api/applications/ HTTP/1.1" 200 967
+[07/Aug/2026 06:45:40] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 06:45:40] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 06:45:47] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 06:45:47] "GET /api/applications/ HTTP/1.1" 200 6665
+[07/Aug/2026 06:45:47] "GET /api/applications/ HTTP/1.1" 200 6665
+[07/Aug/2026 06:56:15] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 06:56:16] "GET /api/applications/ HTTP/1.1" 200 7575
+[07/Aug/2026 06:56:16,128] - Broken pipe from ('127.0.0.1', 49548)
+[07/Aug/2026 06:57:17] "GET /api/applications/ HTTP/1.1" 200 7575
+[07/Aug/2026 06:58:32] "POST /api/auth/register/ HTTP/1.1" 201 165
+[07/Aug/2026 06:58:32] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 06:58:46] "POST /api/applications/ HTTP/1.1" 201 1549
+[07/Aug/2026 06:58:47] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 06:58:47] "PATCH /api/applications/6a7534c0425add9f6e843852/ HTTP/1.1" 200 1653
+[07/Aug/2026 06:58:49] "POST /api/applications/ HTTP/1.1" 201 1394
+[07/Aug/2026 06:58:49,819] - Broken pipe from ('127.0.0.1', 64229)
+[07/Aug/2026 06:59:03] "POST /api/auth/login/ HTTP/1.1" 200 165
+[07/Aug/2026 06:59:03] "GET /api/applications/ HTTP/1.1" 200 3050
+[07/Aug/2026 06:59:03] "POST /api/applications//analyse/ HTTP/1.1" 404 179
+[07/Aug/2026 06:59:03,964] - Broken pipe from ('127.0.0.1', 64269)
+[07/Aug/2026 06:59:15] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 06:59:15] "GET /api/applications/ HTTP/1.1" 200 5611
+[07/Aug/2026 06:59:18] "POST /api/applications/6a7534cf425add9f6e843853/analyse/ HTTP/1.1" 200 2140
+[07/Aug/2026 06:59:18] "PATCH /api/applications/6a7534cf425add9f6e843853/ HTTP/1.1" 400 100
+[07/Aug/2026 06:59:18,338] - Broken pipe from ('127.0.0.1', 64235)
+[07/Aug/2026 06:59:58] "GET /api/auth/me/ HTTP/1.1" 200 121
+[07/Aug/2026 06:59:58] "GET /api/auth/me/ HTTP/1.1" 200 121
+[07/Aug/2026 06:59:58] "GET /api/applications/ HTTP/1.1" 200 9229
+[07/Aug/2026 06:59:59] "GET /api/applications/ HTTP/1.1" 200 9229
+[07/Aug/2026 07:00:12] "OPTIONS /api/applications/6a7534c0425add9f6e843852/analyse/ HTTP/1.1" 200 0
+[07/Aug/2026 07:00:17] "POST /api/applications/6a7534c0425add9f6e843852/analyse/ HTTP/1.1" 200 2430
+[07/Aug/2026 07:00:22] "OPTIONS /api/applications/6a7531b58c4ffc41e216914e/analyse/ HTTP/1.1" 200 0
+[07/Aug/2026 07:00:25] "POST /api/applications/6a7531b58c4ffc41e216914e/analyse/ HTTP/1.1" 200 2079
+[07/Aug/2026 07:01:24] "OPTIONS /api/applications/6a7531828c4ffc41e216914d/analyse/ HTTP/1.1" 200 0
+[07/Aug/2026 07:01:28] "POST /api/applications/6a7531828c4ffc41e216914d/analyse/ HTTP/1.1" 200 2371
+[07/Aug/2026 07:01:39] "OPTIONS /api/applications/6a7534c0425add9f6e843852/ HTTP/1.1" 200 0
+[07/Aug/2026 07:01:39] "DELETE /api/applications/6a7534c0425add9f6e843852/ HTTP/1.1" 200 58
+[07/Aug/2026 07:01:39] "GET /api/applications/ HTTP/1.1" 200 8442
+[07/Aug/2026 07:01:46] "OPTIONS /api/applications/6a7531b58c4ffc41e216914e/ HTTP/1.1" 200 0
+[07/Aug/2026 07:01:46] "DELETE /api/applications/6a7531b58c4ffc41e216914e/ HTTP/1.1" 200 58
+[07/Aug/2026 07:01:46] "GET /api/applications/ HTTP/1.1" 200 6990
+[07/Aug/2026 07:01:50] "OPTIONS /api/applications/6a7531828c4ffc41e216914d/ HTTP/1.1" 200 0
+[07/Aug/2026 07:01:50] "DELETE /api/applications/6a7531828c4ffc41e216914d/ HTTP/1.1" 200 58
+[07/Aug/2026 07:01:50] "GET /api/applications/ HTTP/1.1" 200 5401
+[07/Aug/2026 07:01:54] "DELETE /api/applications/6a750eee7dd8292fd0e6b200/ HTTP/1.1" 200 58
+[07/Aug/2026 07:01:54] "GET /api/applications/ HTTP/1.1" 200 4256
+[07/Aug/2026 07:01:58] "OPTIONS /api/applications/6a750e347dd8292fd0e6b1fc/ HTTP/1.1" 200 0
+[07/Aug/2026 07:01:58] "DELETE /api/applications/6a750e347dd8292fd0e6b1fc/ HTTP/1.1" 200 58
+[07/Aug/2026 07:01:58] "GET /api/applications/ HTTP/1.1" 200 3192
+[07/Aug/2026 07:02:02] "DELETE /api/applications/6a750eeb7dd8292fd0e6b1fd/ HTTP/1.1" 200 58
+[07/Aug/2026 07:02:02] "GET /api/applications/ HTTP/1.1" 200 2128
+[07/Aug/2026 07:02:17] "OPTIONS /api/applications/6a750eee7dd8292fd0e6b1ff/ HTTP/1.1" 200 0
+[07/Aug/2026 07:02:17] "DELETE /api/applications/6a750eee7dd8292fd0e6b1ff/ HTTP/1.1" 200 58
+[07/Aug/2026 07:02:17] "GET /api/applications/ HTTP/1.1" 200 1065
+[07/Aug/2026 07:02:20] "DELETE /api/applications/6a750eed7dd8292fd0e6b1fe/ HTTP/1.1" 200 58
+[07/Aug/2026 07:02:20] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:02:25] "POST /api/auth/register/ HTTP/1.1" 400 58
+[07/Aug/2026 07:02:27] "POST /api/auth/login/ HTTP/1.1" 200 178
+[07/Aug/2026 07:02:27] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 07:02:27] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:02:27] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:02:27] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 07:02:27] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:02:27] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:02:38] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:02:38] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:02:44] "POST /api/auth/login/ HTTP/1.1" 200 177
+[07/Aug/2026 07:02:44] "GET /api/applications/ HTTP/1.1" 200 4237
+[07/Aug/2026 07:02:44] "GET /api/applications/ HTTP/1.1" 200 4237
+[07/Aug/2026 07:02:49] "OPTIONS /api/applications/6a7437fcaf30e1e48d822b79/ HTTP/1.1" 200 0
+[07/Aug/2026 07:02:49] "DELETE /api/applications/6a7437fcaf30e1e48d822b79/ HTTP/1.1" 200 58
+[07/Aug/2026 07:02:49] "GET /api/applications/ HTTP/1.1" 200 3181
+[07/Aug/2026 07:02:53] "OPTIONS /api/applications/6a750f5a7dd8292fd0e6b201/ HTTP/1.1" 200 0
+[07/Aug/2026 07:02:53] "DELETE /api/applications/6a750f5a7dd8292fd0e6b201/ HTTP/1.1" 200 58
+[07/Aug/2026 07:02:53] "GET /api/applications/ HTTP/1.1" 200 2121
+[07/Aug/2026 07:02:55] "OPTIONS /api/applications/6a7520297dd8292fd0e6b202/ HTTP/1.1" 200 0
+[07/Aug/2026 07:02:55] "DELETE /api/applications/6a7520297dd8292fd0e6b202/ HTTP/1.1" 200 58
+[07/Aug/2026 07:02:55] "GET /api/applications/ HTTP/1.1" 200 1064
+[07/Aug/2026 07:03:00] "OPTIONS /api/applications/6a7521517dd8292fd0e6b203/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:00] "DELETE /api/applications/6a7521517dd8292fd0e6b203/ HTTP/1.1" 200 58
+[07/Aug/2026 07:03:00] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:03:05] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:03:05] "OPTIONS /api/admin/summary/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:05] "OPTIONS /api/admin/summary/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:05] "GET /api/applications/ HTTP/1.1" 200 5684
+[07/Aug/2026 07:03:05] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:03:05] "GET /api/applications/ HTTP/1.1" 200 5684
+[07/Aug/2026 07:03:05] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:03:11] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:03:11] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:03:16] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:03:16] "GET /api/applications/ HTTP/1.1" 200 5684
+[07/Aug/2026 07:03:16] "GET /api/applications/ HTTP/1.1" 200 5684
+[07/Aug/2026 07:03:23] "OPTIONS /api/applications/6a750ca17dd8292fd0e6b1f8/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:23] "DELETE /api/applications/6a750ca17dd8292fd0e6b1f8/ HTTP/1.1" 200 58
+[07/Aug/2026 07:03:23] "GET /api/applications/ HTTP/1.1" 200 4630
+[07/Aug/2026 07:03:27] "OPTIONS /api/applications/6a750e1e7dd8292fd0e6b1fa/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:27] "DELETE /api/applications/6a750e1e7dd8292fd0e6b1fa/ HTTP/1.1" 200 58
+[07/Aug/2026 07:03:27] "GET /api/applications/ HTTP/1.1" 200 3577
+[07/Aug/2026 07:03:32] "OPTIONS /api/applications/6a7534cf425add9f6e843853/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:32] "DELETE /api/applications/6a7534cf425add9f6e843853/ HTTP/1.1" 200 58
+[07/Aug/2026 07:03:32] "GET /api/applications/ HTTP/1.1" 200 2109
+[07/Aug/2026 07:03:38] "OPTIONS /api/applications/6a750e1f7dd8292fd0e6b1fb/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:38] "DELETE /api/applications/6a750e1f7dd8292fd0e6b1fb/ HTTP/1.1" 200 58
+[07/Aug/2026 07:03:38] "GET /api/applications/ HTTP/1.1" 200 1055
+[07/Aug/2026 07:03:42] "OPTIONS /api/applications/6a750ca27dd8292fd0e6b1f9/ HTTP/1.1" 200 0
+[07/Aug/2026 07:03:42] "DELETE /api/applications/6a750ca27dd8292fd0e6b1f9/ HTTP/1.1" 200 58
+[07/Aug/2026 07:03:42] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:03:54] "POST /api/auth/register/ HTTP/1.1" 400 58
+[07/Aug/2026 07:03:56] "POST /api/auth/login/ HTTP/1.1" 200 178
+[07/Aug/2026 07:03:56] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:03:56] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:03:56] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 07:03:56] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:03:56] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:03:56] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 07:04:12] "POST /api/applications/ HTTP/1.1" 201 1469
+[07/Aug/2026 07:04:12] "GET /api/applications/ HTTP/1.1" 200 1471
+[07/Aug/2026 07:04:12] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:04:12] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 07:04:42] "POST /api/applications/ HTTP/1.1" 201 1617
+[07/Aug/2026 07:04:42] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:04:42] "GET /api/applications/ HTTP/1.1" 200 3089
+[07/Aug/2026 07:04:42] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 07:04:54] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:04:54] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:05:01] "POST /api/auth/login/ HTTP/1.1" 200 177
+[07/Aug/2026 07:05:01] "GET /api/applications/ HTTP/1.1" 200 1471
+[07/Aug/2026 07:05:01] "GET /api/applications/ HTTP/1.1" 200 1471
+[07/Aug/2026 07:05:05] "OPTIONS /api/applications/6a753610425add9f6e843854/ HTTP/1.1" 200 0
+[07/Aug/2026 07:05:05] "PATCH /api/applications/6a753610425add9f6e843854/ HTTP/1.1" 200 1573
+[07/Aug/2026 07:05:05] "GET /api/applications/ HTTP/1.1" 200 1575
+[07/Aug/2026 07:05:18] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:05:18] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:05:24] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:05:24] "GET /api/applications/ HTTP/1.1" 200 1619
+[07/Aug/2026 07:05:24] "GET /api/applications/ HTTP/1.1" 200 1619
+[07/Aug/2026 07:05:28] "OPTIONS /api/applications/6a75362d425add9f6e843855/ HTTP/1.1" 200 0
+[07/Aug/2026 07:05:28] "PATCH /api/applications/6a75362d425add9f6e843855/ HTTP/1.1" 200 1721
+[07/Aug/2026 07:05:28] "GET /api/applications/ HTTP/1.1" 200 1723
+[07/Aug/2026 07:06:03] "OPTIONS /api/applications/6a75362d425add9f6e843855/analyse/ HTTP/1.1" 200 0
+[07/Aug/2026 07:06:05] "POST /api/applications/6a75362d425add9f6e843855/analyse/ HTTP/1.1" 200 2126
+[07/Aug/2026 07:06:16] "PATCH /api/applications/6a75362d425add9f6e843855/ HTTP/1.1" 200 1472
+[07/Aug/2026 07:06:16] "GET /api/applications/ HTTP/1.1" 200 1474
+[07/Aug/2026 07:06:25] "POST /api/applications/6a75362d425add9f6e843855/analyse/ HTTP/1.1" 200 2092
+[07/Aug/2026 07:08:25] "POST /api/applications/6a75362d425add9f6e843855/ HTTP/1.1" 200 376
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\checks\registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\checks\urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\urls\resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\backend\config\urls.py", line 6, in <module>
+    path("api/", include("core.urls")),
+                 ~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\backend\core\urls.py", line 3, in <module>
+    from .views import (
+    ...<14 lines>...
+    )
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\backend\core\views.py", line 179
+    class BankListView(APIView):
+    ^^^^^
+IndentationError: expected an indented block after class definition on line 176
+[07/Aug/2026 07:21:51] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:21:52] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:21:52,096] - Broken pipe from ('127.0.0.1', 56308)
+[07/Aug/2026 07:22:18] "OPTIONS /api/health/metrics/ HTTP/1.1" 200 0
+[07/Aug/2026 07:22:18] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:22:18] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:22:41] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:22:41] "GET /api/applications/ HTTP/1.1" 200 2
+[07/Aug/2026 07:22:41,823] - Broken pipe from ('127.0.0.1', 49532)
+[07/Aug/2026 07:22:53] "POST /api/auth/login/ HTTP/1.1" 200 165
+[07/Aug/2026 07:22:53] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:23:07] "POST /api/applications/ HTTP/1.1" 201 1394
+[07/Aug/2026 07:23:08] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:23:08] "PATCH /api/applications/6a753a7522a09f7ccacf084c/ HTTP/1.1" 200 1498
+[07/Aug/2026 07:23:09] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:23:09,135] - Broken pipe from ('127.0.0.1', 49538)
+[07/Aug/2026 07:24:23] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:24:24] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:24:24] "GET /api/applications/ HTTP/1.1" 200 1521
+[07/Aug/2026 07:24:24,630] - Broken pipe from ('127.0.0.1', 58541)
+[07/Aug/2026 07:24:25] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:24:26] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:24:27] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:24:28] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:24:28] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:24:56] "GET /api/health/metrics/ HTTP/1.1" 200 755
+[07/Aug/2026 07:24:57] "GET /api/health/metrics/ HTTP/1.1" 200 755
+[07/Aug/2026 07:25:01] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:25:01] "GET /api/health/metrics/ HTTP/1.1" 200 755
+[07/Aug/2026 07:25:02] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:25:03] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:25:29] "GET /admin/core/user/?role__exact=bank HTTP/1.1" 302 0
+[07/Aug/2026 07:25:29] "GET /admin/login/?next=/admin/core/user/%3Frole__exact%3Dbank HTTP/1.1" 200 4231
+[07/Aug/2026 07:26:14] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:26:14] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:26:14] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:26:14] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:26:14] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:27:04] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:27:04] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:27:14] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:27:14] "GET /api/applications/ HTTP/1.1" 200 1521
+[07/Aug/2026 07:27:14] "GET /api/applications/ HTTP/1.1" 200 1521
+[07/Aug/2026 07:27:14] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:27:14] "GET /api/health/metrics/ HTTP/1.1" 200 755
+[07/Aug/2026 07:27:21] "GET /api/health/metrics/ HTTP/1.1" 200 755
+[07/Aug/2026 07:32:44] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:32:44] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:32:44] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:32:44] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:32:44] "GET /api/applications/ HTTP/1.1" 200 4593
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\checks\registry.py", line 89, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\core\checks\urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\urls\resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\backend\config\urls.py", line 6, in <module>
+    path("api/", include("core.urls")),
+                 ~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\LOQ\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\backend\core\urls.py", line 3, in <module>
+    from .views import (
+    ...<16 lines>...
+    )
+  File "C:\Users\LOQ\OneDrive\Desktop\csedemo\backend\core\views.py", line 187
+    if request.user.role != User.Role.ADMIN:
+IndentationError: expected an indented block after function definition on line 186
+[07/Aug/2026 07:36:19] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:36:19] "GET /api/admin/analytics/ HTTP/1.1" 200 1200
+[07/Aug/2026 07:36:19,634] - Broken pipe from ('127.0.0.1', 53612)
+[07/Aug/2026 07:37:01] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:37:01] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:37:01] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:01] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:01] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:01] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:07] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:37:07] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:37:07] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:07] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:07] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:07] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:13] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:37:13] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:37:13] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:13] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:13] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:13] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:19] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:37:19] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:19] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:19] "GET /api/applications/ HTTP/1.1" 200 4593
+[07/Aug/2026 07:37:19] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:26] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:37:26] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:37:33] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:37:33] "GET /api/applications/ HTTP/1.1" 200 1521
+[07/Aug/2026 07:37:33] "GET /api/applications/ HTTP/1.1" 200 1521
+[07/Aug/2026 07:37:33] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:37:33] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:38:21] "OPTIONS /api/applications/6a753a7522a09f7ccacf084c/analyse/ HTTP/1.1" 200 0
+[07/Aug/2026 07:38:27] "OPTIONS /api/applications/6a753a7522a09f7ccacf084c/ HTTP/1.1" 200 0
+[07/Aug/2026 07:38:27] "POST /api/applications/6a753a7522a09f7ccacf084c/ HTTP/1.1" 200 371
+[07/Aug/2026 07:38:35] "POST /api/applications/6a753a7522a09f7ccacf084c/analyse/ HTTP/1.1" 200 2024
+[07/Aug/2026 07:39:06] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:39:06] "OPTIONS /api/admin/analytics/ HTTP/1.1" 200 0
+[07/Aug/2026 07:39:06] "OPTIONS /api/admin/analytics/ HTTP/1.1" 200 0
+[07/Aug/2026 07:39:06] "GET /api/applications/ HTTP/1.1" 200 4488
+[07/Aug/2026 07:39:06] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:39:07] "GET /api/applications/ HTTP/1.1" 200 4488
+[07/Aug/2026 07:39:07] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:39:07] "GET /api/admin/analytics/ HTTP/1.1" 200 1207
+[07/Aug/2026 07:39:07] "GET /api/admin/analytics/ HTTP/1.1" 200 1206
+[07/Aug/2026 07:39:36] "GET /api/admin/analytics/ HTTP/1.1" 200 1207
+[07/Aug/2026 07:39:48] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:39:48] "GET /api/applications/?mine=true HTTP/1.1" 200 1416
+[07/Aug/2026 07:39:52] "POST /api/applications/6a753a7522a09f7ccacf084c/analyse/ HTTP/1.1" 200 2146
+[07/Aug/2026 07:39:52,274] - Broken pipe from ('127.0.0.1', 51141)
+[07/Aug/2026 07:40:13] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:40:13] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:40:13] "GET /api/applications/ HTTP/1.1" 200 4550
+[07/Aug/2026 07:40:13] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:40:13] "GET /api/applications/ HTTP/1.1" 200 4550
+[07/Aug/2026 07:40:13] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:40:13] "GET /api/admin/analytics/ HTTP/1.1" 200 1205
+[07/Aug/2026 07:40:13] "GET /api/admin/analytics/ HTTP/1.1" 200 1205
+[07/Aug/2026 07:40:14] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:40:14] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:40:14] "GET /api/applications/ HTTP/1.1" 200 4550
+[07/Aug/2026 07:40:14] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:40:14] "GET /api/applications/ HTTP/1.1" 200 4550
+[07/Aug/2026 07:40:14] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:40:14] "GET /api/admin/analytics/ HTTP/1.1" 200 1205
+[07/Aug/2026 07:40:14] "GET /api/admin/analytics/ HTTP/1.1" 200 1202
+[07/Aug/2026 07:40:30] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:40:34] "POST /api/applications/6a753a7522a09f7ccacf084c/analyse/ HTTP/1.1" 200 2221
+[07/Aug/2026 07:40:34,376] - Broken pipe from ('127.0.0.1', 64462)
+[07/Aug/2026 07:40:44] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:40:44] "GET /api/demo-banks/ HTTP/1.1" 200 260
+[07/Aug/2026 07:40:47] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:40:51] "POST /api/applications/6a753a7522a09f7ccacf084c/analyse/ HTTP/1.1" 200 2159
+[07/Aug/2026 07:40:51] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:40:51] "GET /api/applications/ HTTP/1.1" 200 1484
+[07/Aug/2026 07:40:51] "GET /api/applications/ HTTP/1.1" 200 1484
+[07/Aug/2026 07:40:51] "GET /api/health/metrics/ HTTP/1.1" 200 756
+[07/Aug/2026 07:40:51] "GET /api/health/metrics/ HTTP/1.1" 200 754
+[07/Aug/2026 07:40:52,187] - Broken pipe from ('127.0.0.1', 64470)
+[07/Aug/2026 07:41:07] "POST /api/auth/login/ HTTP/1.1" 200 181
+[07/Aug/2026 07:41:11] "POST /api/applications/6a753a7522a09f7ccacf084c/analyse/ HTTP/1.1" 200 2123
+[07/Aug/2026 07:41:11,395] - Broken pipe from ('127.0.0.1', 59353)
+[07/Aug/2026 07:41:24] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:41:24] "GET /api/admin/analytics/ HTTP/1.1" 200 1204
+[07/Aug/2026 07:41:24,898] - Broken pipe from ('127.0.0.1', 59362)
+[07/Aug/2026 07:41:44] "POST /api/auth/login/ HTTP/1.1" 200 171
+[07/Aug/2026 07:41:45] "GET /api/applications/ HTTP/1.1" 200 4538
+[07/Aug/2026 07:41:45] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:41:45] "GET /api/applications/ HTTP/1.1" 200 4538
+[07/Aug/2026 07:41:45] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:41:45] "GET /api/admin/analytics/ HTTP/1.1" 200 1205
+[07/Aug/2026 07:41:45] "GET /api/admin/analytics/ HTTP/1.1" 200 1206
+[07/Aug/2026 07:41:50] "GET /api/admin/analytics/ HTTP/1.1" 200 1206
+[07/Aug/2026 07:41:53] "GET /api/admin/analytics/ HTTP/1.1" 200 1204
+[07/Aug/2026 07:42:47,697] - Broken pipe from ('127.0.0.1', 56006)
+[07/Aug/2026 07:42:49] "POST /admin/login/?next=/admin/core/user/%3Frole__exact%3Dbank HTTP/1.1" 302 0
+[07/Aug/2026 07:42:49] "GET /admin/core/user/?role__exact=bank HTTP/1.1" 200 14332
+[07/Aug/2026 07:42:49] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 07:42:49] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:42:49] "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /admin/core/user/ HTTP/1.1" 200 15524
+[07/Aug/2026 07:42:57] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57,221] - Broken pipe from ('127.0.0.1', 64997)
+[07/Aug/2026 07:42:57] "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 07:42:57] "GET /static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:42:57] "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /admin/core/user/4/change/ HTTP/1.1" 200 25413
+[07/Aug/2026 07:43:01] "GET /static/admin/js/calendar.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/css/forms.css HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/SelectBox.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 07:43:01] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/js/change_form.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:01] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:43:08] "GET /admin/core/user/ HTTP/1.1" 200 15524
+[07/Aug/2026 07:43:08] "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /admin/core/user/1/change/ HTTP/1.1" 200 25396
+[07/Aug/2026 07:43:09] "GET /static/admin/js/calendar.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/css/forms.css HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/SelectBox.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[07/Aug/2026 07:43:09] "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/js/change_form.js HTTP/1.1" 404 179
+[07/Aug/2026 07:43:09] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 404 179
+[07/Aug/2026 07:43:18] "GET /admin/core/user/ HTTP/1.1" 200 15524
+[07/Aug/2026 07:45:04] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:45:05] "GET /api/auth/me/ HTTP/1.1" 200 111
+[07/Aug/2026 07:45:05] "GET /api/applications/ HTTP/1.1" 200 4538
+[07/Aug/2026 07:45:05] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:45:05] "GET /api/applications/ HTTP/1.1" 200 4538
+[07/Aug/2026 07:45:05] "GET /api/admin/summary/ HTTP/1.1" 200 756
+[07/Aug/2026 07:45:05] "GET /api/admin/analytics/ HTTP/1.1" 200 1205
+[07/Aug/2026 07:45:05] "GET /api/admin/analytics/ HTTP/1.1" 200 1203
+[07/Aug/2026 07:45:35] "POST /api/auth/register/ HTTP/1.1" 400 58
+[07/Aug/2026 07:45:37] "POST /api/auth/login/ HTTP/1.1" 200 178
+[07/Aug/2026 07:45:37] "GET /api/applications/ HTTP/1.1" 200 3073
+[07/Aug/2026 07:45:37] "GET /api/loan-ads/ HTTP/1.1" 200 1442
+[07/Aug/2026 07:45:37] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:45:37] "GET /api/applications/ HTTP/1.1" 200 3073
+[07/Aug/2026 07:45:37] "GET /api/banks/ HTTP/1.1" 200 353
+[07/Aug/2026 07:45:37] "GET /api/loan-ads/ HTTP/1.1" 200 1442
