@@ -1,0 +1,278 @@
+[2m6:43:26 am[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\src\App.jsx: Unexpected token, expected "}" (777:101)
+
+[0m [90m 775 |[31m                 ) [33m:[31m [36mnull[31m}
+ [90m 776 |[31m                 [33m<[31m[33mdiv[31m className[33m=[31m[32m"card-actions"[31m[33m>[31m
+[31m[1m>[22m[31m[90m 777 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{() [33m=>[31m verifyBorrowerStates[33m.[31mapplication[33m.[31mid)} disabled[33m=[31m{verifications[application[33m.[31mid][33m?[31m[33m.[31mbusy}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"shield"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mVerify[31m borrower[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m     |[31m                                                                                                      [31m[1m^[22m[31m
+ [90m 778 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"approve-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'approved'[31m)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"check"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mApprove[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 779 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"reject-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'rejected'[31m)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"cross"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mReject[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 780 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{(event) [33m=>[31m deleteApplication(application[33m,[31m event)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"trash"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mDelete[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/LOQ/OneDrive/Desktop/csedemo/frontend/src/App.jsx[39m:777:101
+[33m  786 |        </section>
+  787 |      </AppShell>
+  788 |    )
+      |  ^
+  789 |  }
+  790 |  [39m
+      at constructor (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.unexpected (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at JSXParserMixin.expect (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6920:12)
+      at JSXParserMixin.jsxParseExpressionContainer (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4653:10)
+      at JSXParserMixin.jsxParseAttributeValue (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4620:21)
+      at JSXParserMixin.jsxParseAttribute (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4669:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4683:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4678:17)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4702:33)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElement (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at JSXParserMixin.parseFunctionBody (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12122:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12104:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11713:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+[2m6:43:26 am[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\src\App.jsx: Unexpected token, expected "}" (777:101)
+
+[0m [90m 775 |[31m                 ) [33m:[31m [36mnull[31m}
+ [90m 776 |[31m                 [33m<[31m[33mdiv[31m className[33m=[31m[32m"card-actions"[31m[33m>[31m
+[31m[1m>[22m[31m[90m 777 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{() [33m=>[31m verifyBorrowerStates[33m.[31mapplication[33m.[31mid)} disabled[33m=[31m{verifications[application[33m.[31mid][33m?[31m[33m.[31mbusy}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"shield"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mVerify[31m borrower[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m     |[31m                                                                                                      [31m[1m^[22m[31m
+ [90m 778 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"approve-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'approved'[31m)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"check"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mApprove[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 779 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"reject-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'rejected'[31m)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"cross"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mReject[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 780 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{(event) [33m=>[31m deleteApplication(application[33m,[31m event)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"trash"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mDelete[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/LOQ/OneDrive/Desktop/csedemo/frontend/src/App.jsx[39m:777:101
+[33m  786 |        </section>
+  787 |      </AppShell>
+  788 |    )
+      |  ^
+  789 |  }
+  790 |  [39m
+      at constructor (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.unexpected (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at JSXParserMixin.expect (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6920:12)
+      at JSXParserMixin.jsxParseExpressionContainer (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4653:10)
+      at JSXParserMixin.jsxParseAttributeValue (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4620:21)
+      at JSXParserMixin.jsxParseAttribute (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4669:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4683:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4678:17)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4702:33)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElement (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at JSXParserMixin.parseFunctionBody (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12122:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12104:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11713:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+[2m6:43:26 am[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\src\App.jsx: Unexpected token, expected "}" (777:101)
+
+[0m [90m 775 |[31m                 ) [33m:[31m [36mnull[31m}
+ [90m 776 |[31m                 [33m<[31m[33mdiv[31m className[33m=[31m[32m"card-actions"[31m[33m>[31m
+[31m[1m>[22m[31m[90m 777 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{() [33m=>[31m verifyBorrowerStates[33m.[31mapplication[33m.[31mid)} disabled[33m=[31m{verifications[application[33m.[31mid][33m?[31m[33m.[31mbusy}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"shield"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mVerify[31m borrower[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m     |[31m                                                                                                      [31m[1m^[22m[31m
+ [90m 778 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"approve-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'approved'[31m)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"check"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mApprove[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 779 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"reject-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'rejected'[31m)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"cross"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mReject[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 780 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{(event) [33m=>[31m deleteApplication(application[33m,[31m event)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"trash"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mDelete[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/LOQ/OneDrive/Desktop/csedemo/frontend/src/App.jsx[39m:777:101
+[33m  786 |        </section>
+  787 |      </AppShell>
+  788 |    )
+      |  ^
+  789 |  }
+  790 |  [39m
+      at constructor (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.unexpected (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at JSXParserMixin.expect (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6920:12)
+      at JSXParserMixin.jsxParseExpressionContainer (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4653:10)
+      at JSXParserMixin.jsxParseAttributeValue (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4620:21)
+      at JSXParserMixin.jsxParseAttribute (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4669:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4683:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4678:17)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4702:33)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElement (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at JSXParserMixin.parseFunctionBody (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12122:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12104:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11713:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+[2m6:43:43 am[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [33mwarning: [33mDuplicate key "shield" in object literal[33m
+110 |    <path key="a" d="M5 3l14 9-14 9V3z" />],
+111 |  
+112 |    shield: [
+    |    ^
+113 |    <path key="a" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />],
+114 |  
+[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/LOQ/OneDrive/Desktop/csedemo/frontend/src/Illustrations.jsx[39m
+[2m6:57:53 am[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\src\App.jsx: Unexpected token, expected "}" (834:101)
+
+[0m [90m 832 |[31m                 [33m<[31m[33mdiv[31m className[33m=[31m[32m"card-actions"[31m[33m>[31m
+ [90m 833 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{() [33m=>[31m runAnalysis(application[33m.[31mid)} disabled[33m=[31m{analyses[application[33m.[31mid][33m?[31m[33m.[31mbusy}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"shield"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m {analyses[application[33m.[31mid][33m?[31m[33m.[31mbusy [33m?[31m [32m'Analysing...'[31m [33m:[31m [32m'AI Analyse'[31m}[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+[31m[1m>[22m[31m[90m 834 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{() [33m=>[31m verifyBorrowerStates[33m.[31mapplication[33m.[31mid)} disabled[33m=[31m{verifications[application[33m.[31mid][33m?[31m[33m.[31mbusy}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"shield"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mVerify[31m borrower[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m     |[31m                                                                                                      [31m[1m^[22m[31m
+ [90m 835 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"approve-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'approved'[31m)} disabled[33m=[31m{application[33m.[31mauto_rejected} title[33m=[31m{application[33m.[31mauto_rejected [33m?[31m [32m'Auto-rejected by AI analyser'[31m [33m:[31m [32m''[31m}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"check"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mApprove[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 836 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"reject-btn"[31m onClick[33m=[31m{() [33m=>[31m updateStatus(application[33m.[31mid[33m,[31m [32m'rejected'[31m)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"cross"[31m size[33m=[31m{[35m14[31m} [33m/[31m[33m>[31m [33mReject[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m
+ [90m 837 |[31m                   [33m<[31m[33mbutton[31m className[33m=[31m[32m"ghost-button"[31m onClick[33m=[31m{(event) [33m=>[31m deleteApplication(application[33m,[31m event)}[33m>[31m[33m<[31m[33mIcon[31m name[33m=[31m[32m"trash"[31m size[33m=[31m{[35m13[31m} [33m/[31m[33m>[31m [33mDelete[31m[33m<[31m[33m/[31m[33mbutton[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/LOQ/OneDrive/Desktop/csedemo/frontend/src/App.jsx[39m:834:101
+[33m  839 |                </article>
+  840 |              )) : <div className="app-empty">No incoming applications right now.</div>}
+  841 |            </div>
+      |               ^
+  842 |          </div>
+  843 |        </section>[39m
+      at constructor (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at JSXParserMixin.raise (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at JSXParserMixin.unexpected (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at JSXParserMixin.expect (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:6920:12)
+      at JSXParserMixin.jsxParseExpressionContainer (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4653:10)
+      at JSXParserMixin.jsxParseAttributeValue (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4620:21)
+      at JSXParserMixin.jsxParseAttribute (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4669:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4683:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4678:17)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4702:33)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElementAt (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4714:32)
+      at JSXParserMixin.jsxParseElement (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at JSXParserMixin.parseFunctionBody (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12122:24)
+      at JSXParserMixin.parseArrowExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12104:10)
+      at JSXParserMixin.parseParenAndDistinguishExpression (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11713:12)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at JSXParserMixin.parseExprAtom (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at JSXParserMixin.parseExprSubscripts (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at JSXParserMixin.parseUpdate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at JSXParserMixin.parseMaybeUnary (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at JSXParserMixin.parseExprOps (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at JSXParserMixin.parseMaybeConditional (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at JSXParserMixin.parseMaybeAssign (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at JSXParserMixin.allowInAnd (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (C:\Users\LOQ\OneDrive\Desktop\csedemo\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
